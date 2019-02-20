@@ -1,0 +1,374 @@
+/* Small global */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Corbel;
+  /* font-weight: lighter; */
+  background-color: #32373A;
+}
+
+h2 {
+font-size: 30px;
+
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "foodReserves"
+  "drinkReserves"
+}
+
+.foodReserves {
+  display: grid;
+  grid-area: foodReserves;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+.foodReservesTitle, .drinkReservesTitle {
+  color: white;
+}
+
+#foodReserves {
+  height: 1000px;
+  width: 100%;
+}
+
+.drinkReserves {
+  display: grid;
+  grid-area: drinkReserves;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+/* .drinkReservesTitle {
+  color: white;
+} */
+
+#drinkReserves {
+  height: 1000px;
+  width: 100%
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "distances"
+  "speed"
+}
+
+.distances {
+  grid-area: distances;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+.distancesTitle, .speedTitle {
+  color: white;
+}
+
+#distances {
+  height: 600px;
+  width: 100%;
+}
+
+.speed {
+  grid-area: speed;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+#speed {
+  height: 500px;
+  width: 100%;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "thrusterTemp"
+  "asteroidCollisions"
+}
+
+.thrusterTemp {
+  grid-area: thrusterTemp;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+.thrusterTempTitle, .asteroidCollisionsTitle {
+  color: white;
+}
+
+#thrusterTemp {
+  height: 1000px;
+  width: 100%;
+}
+
+.asteroidCollisions {
+  grid-area: asteroidCollisions;
+  height: 100%;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+#asteroidCollisions {
+  height: 500px;
+  width: 100%;
+}
+
+/* Small global end */
+
+/* medium */
+
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+
+/* eerste rij */
+
+.container1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.foodReserves {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.foodReservesTitle, .drinkReservesTitle {
+  width: 30%;
+}
+
+#foodReserves {
+  height: 400px;
+}
+
+.drinkReserves {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+}
+
+#drinkReserves {
+  height: 400px;
+}
+
+/* tweede rij */
+
+.container2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.distances {
+  grid-column: 1;
+  /* grid-row: 1; */
+  width: 100%;
+}
+
+.distancesTitle, {
+  width: 30%;
+}
+
+#distances {
+  height: 500px;
+}
+
+.speed {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.speedTitle {
+  width: 30%;
+}
+
+#speed {
+  height: 300px;
+}
+
+/* derde rij */
+
+.container3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.thrusterTemp {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.thrusterTempTitle, .asteroidCollisionsTitle {
+  width: 30%;
+}
+
+#thrusterTemp {
+  height: 300px;
+}
+
+.asteroidCollisions {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#asteroidCollisions {
+  height: 300px;
+}
+
+} /* @media */
+
+@media only screen and (min-width: 700px) and (max-width: 899px) {
+
+/* rechterstuk */
+
+body {
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  grid-template-rows: 30% 30%;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.container1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  height: 100%;
+  width: 100%;
+}
+
+#foodReserves, #drinkReserves {
+  height: 250px;
+  width: 100%;
+}
+
+.container2 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#distances, #speed {
+  height: 300px;
+}
+
+.container3 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#thrusterTemp, #asteroidCollisions {
+  height: 250px;
+}
+
+} /* media */
+
+@media only screen and (min-width: 900px) {
+
+body {
+  display: grid;
+  grid-template-columns: 25% 50% 20%;
+  grid-template-rows: 40% 40%;
+}
+
+.container1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#foodReserves, #drinkReserves {
+  height: 230px;
+}
+
+.container2 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#distances, #speed {
+  height: 270px;
+}
+
+.container3 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#thrusterTemp, #asteroidCollisions {
+  height: 230px;
+}
+
+} /* media */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* . */
